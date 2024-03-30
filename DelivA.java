@@ -61,20 +61,10 @@ public class DelivA {
 
 			@Override
 			public int compare(Node o1, Node o2) {
-				// sort nodes dec ending order of indegree
+				// sort nodes decending order of indegree
 				//1. Node with greater indegree
 	    		//2. Node with greater outDegree
 	    		//3.alphabetically
-				/*if (o1.getIncomingEdges().size() < o2.getIncomingEdges().size()) {
-					return 1;
-				}
-				else if (o1.getIncomingEdges().size()>o2.getIncomingEdges().size()) {
-					return -1;
-				} else {
-					return o1.getAbbrev().compareToIgnoreCase(o2.getAbbrev());
-				}
-                */
-				
 				int CompareIndegree = Integer.compare(o2.getIncomingEdges().size(), o1.getIncomingEdges().size());
 	            if (CompareIndegree != 0) {
 	            	return CompareIndegree;
@@ -98,16 +88,7 @@ public class DelivA {
 				//1. Node with greater outdegree
 	    		//2. Node with greater inDegree
 	    		//3.alphabetically
-				/*
-				if (o1.getOutgoingEdges().size() < o2.getOutgoingEdges().size()) {
-					return 1;
-				}
-				else if (o1.getOutgoingEdges().size()>o2.getOutgoingEdges().size()) {
-					return -1;
-				} else  {
-					return o1.getAbbrev().compareTo(o2.getAbbrev());
-				}*/
-				
+
 			int CompareOutdegree = Integer.compare(o2.getOutgoingEdges().size(), o1.getOutgoingEdges().size());
             if (CompareOutdegree != 0) {
             	return CompareOutdegree;
